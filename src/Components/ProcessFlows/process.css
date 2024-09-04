@@ -1,0 +1,223 @@
+.card-text-name {
+  width: 50%;
+  word-break: break-all;
+}
+.card-title{
+  cursor: pointer;
+}
+
+.offCanvasWidth {
+  width: 33%;
+}
+
+.requiredMargin {
+  margin-top: 1.5rem !important;
+}
+
+.removeMargin {
+  margin-top: 2.4rem !important;
+}
+
+.cardHeight {
+  height: 25vh !important;
+}
+
+.toolboxIcon {
+  border-radius: var(--border-radius-medium);
+  padding: 8px;
+  height: var(--process-icon-height);
+  width: var(--process-icon-width);
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.filterColor {
+  background-color: #DDE6F5;
+}
+
+.waitColor {
+  background-color: #F3DBD8;
+}
+
+.branchColor {
+  background-color: #E5E2EF;
+}
+
+.loopColor {
+  background-color: #D8E9E1;
+}
+
+.pop-over-style {
+  position: absolute;
+  background: var(--background-color-white);
+  ;
+  border: 1px solid var(--primary-border-color);
+  border-radius: var(--border-radius-medium);
+  z-index: 1000;
+  box-shadow: var(--primary-box-shadow);
+}
+
+.closeIcon {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.optionInputCustomWidt {
+  width : 96% !important;
+}
+
+.font-size-small {
+  font-size: var(--font-size-medium);
+}
+
+.flow-card {
+  width: 12rem;
+  border: 1px solid var(--primary-border-color);
+  height: 20vh;
+  border-bottom: none;
+  border-top-left-radius: var(--border-radius-medium);
+  border-top-right-radius: var(--border-radius-medium);
+  background-color: var(--background-color-white);
+}
+
+.flow-header {
+  height: 2rem;
+  background-color: var(--background-color-white);
+  border-top-left-radius: var(--border-radius-medium);
+  border-top-right-radius: var(--border-radius-medium);
+  padding-top: 4px;
+  padding-left: 8px;
+}
+
+
+.flow-footer {
+  height: auto;
+  border: 1px solid var(--primary-border-color);
+  border-top: 1px dotted var(--primary-border-color);
+  border-bottom-left-radius: var(--border-radius-medium);
+  border-bottom-right-radius: var(--border-radius-medium);
+  background-color: var(--background-color-white);
+  text-align: end;
+}
+
+.footer-text {
+  font-size: var(--font-size-medium);
+  margin: 0px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.leftDotBall {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-gray);
+  border-radius: 50%;
+  margin: 4px 10px 0 -19px;
+}
+
+.rightDotBall {
+  height: 10px;
+  width: 10px;
+  background-color: var(--color-gray);
+  border-radius: 50%;
+  margin: 4px -16px 0 10px;
+}
+
+.react-flow__node-selectorNode {
+  font-size: var(--font-size-medium);
+  background: var(--background-color-white);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-medium);
+  text-align: center;
+}
+
+.react-flow__node-elk {
+  background: var(--background-color-white) !important;
+  border-radius: var(--border-radius-medium) !important;
+}
+
+.react-flow__handle {
+  position: relative !important;
+  top: auto !important;
+  transform: none !important;
+  background: var(--primary-color) !important;
+}
+
+
+.label {
+  flex-grow: 1 !important;
+}
+
+.handles {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  width: 10px !important;
+  height: 100% !important;
+  position: absolute !important;
+}
+
+.handles.targets {
+  left: 1px !important;
+  bottom: 12px
+}
+
+.handles.sources {
+  right: -3px !important;
+  top: 12px !important;
+}
+
+.node-container {
+  position: relative;
+  padding: 10px;
+  border: 2px solid var(--border-color-gray);
+  background: var(--background-color-white);
+  border-radius: var(--border-radius-medium);
+  width: 180px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: 2px dotted var(--border-color-gray) !important;
+}
+
+.top-box {
+  position: absolute;
+  top: -140px;
+  left: 0;
+  width: 102% !important;
+  margin-left: -1% !important;
+  height: 140px;
+  background: white;
+  border: 2px solid var(--border-color-gray);
+  box-sizing: border-box;
+  border-radius: var(--border-radius-medium);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 2px dotted var(--border-color-gray) !important;
+}
+
+.option-main {
+  margin-left: -72px;
+  width: 40px;
+}
+
+.option-text {
+  margin-top: -8px;
+}
+
+.source {
+  margin-left: 32px
+}
+
+.more-icon {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.header-box {
+  height: 40px;
+  background-color: var(--process-bg-blue);
+}

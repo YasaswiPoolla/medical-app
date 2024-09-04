@@ -1,0 +1,1 @@
+export const ROLES_API_END_POINT='/roles';

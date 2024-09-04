@@ -1,0 +1,54 @@
+.logo-image {
+  width: 100%;
+  height: 31px;
+  margin-right: 10%;
+}
+.heading{
+    color: #172D76;
+    cursor: default; 
+}
+.userbox {
+  background-color: #172d76;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.username {
+  font-weight: 600;
+  font-family: "Poppins";
+  margin-bottom: 0px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.userrole{
+    font-family: Poppins;
+    font-weight: 400;
+    margin-top: 0px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.custom-toggle {
+  background-color: #ffffff !important;
+  border: white !important;
+  color: #00bdd0 !important;
+  font-size: "18px" !important;
+  padding: 2px !important;
+  border-radius: 10px !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+.custom-input-style {
+  box-shadow: 1px 1px 10px 1px grey;
+}
+.logout-button {
+  width: 100%;
+  height: 38px;
+}
+.logout-button:hover {
+  background-color: #e5f8fa !important;
+}

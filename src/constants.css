@@ -1,0 +1,24 @@
+:root {
+  --canvas-backdrop-color: #0a0a0a4a;
+  --primary-color: #172D76;
+  --font-size-medium: 12px;
+  --font-size-small: 10px;
+  --color-gray: gray;
+  --background-color-white: white;
+  --primary-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --secondary-box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 8px;
+  --font-weight-medium: 600;
+  --primary-border-color: #F0F0F0;
+  --border-radius-medium: 6px;
+  --border-radius-large: 8px;
+  --letter-spacing-small: 1px;
+  --border-color-gray: #ccc;
+  --process-bg-blue: #DDE6F5;
+  --process-icon-height : 32px;
+  --process-icon-width : 32px;
+  --placeholder-color: #595C5F;
+  --input-height : 36px;
+  --input-border : 1px solid #00BDD0;
+  --placeholder-font-size : 16px ;
+  --primary-border : 1px solid #D6D6D6
+}

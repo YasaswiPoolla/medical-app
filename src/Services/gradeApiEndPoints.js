@@ -1,0 +1,1 @@
+export const GRADES_API_END_POINT="/employee-grades"

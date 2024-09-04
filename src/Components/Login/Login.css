@@ -1,0 +1,177 @@
+.parent {
+    position: relative;
+  }
+
+
+.sideimg{
+    height: 100vh;
+    position: relative; 
+    padding: 0; 
+    margin: 0;
+    top:0;
+    right: 0;
+    left: 0;
+}
+
+.logo{
+    background-color: #172D76; 
+    width: 100%;
+}
+.warnstyle{
+  height:50px;
+  margin-top:-50px;
+}
+
+
+.login-input{
+    width: 100%;
+    height: 56px;
+    color:#222222;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    display:block;
+    @media(min-width: 768px) and (max-width: 1024px) {
+      width:100%;
+      height: 36px; 
+      font-size: 12px;
+  }
+}
+.login-card{
+    padding:10px;
+}
+@media(min-width: 768px) and (max-width: 1024px) {
+  .login-card {
+    padding:10px;
+  }
+}
+
+.login-downtext{
+    color:#222222;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Poppins';
+    @media(min-width: 768px) and (max-width: 1024px) {
+      font-size: 10px;
+  }
+}
+
+.login-downcalladmin{
+    color:#FF9100;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Poppins';
+    cursor: pointer;
+  
+    @media(min-width: 768px) and (max-width: 1024px) {
+      font-size: 10px; 
+  }
+}
+
+.login-downcalladmin_disabled{
+  color:#edcfa9;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Poppins';
+  cursor:default;
+
+  @media(min-width: 768px) and (max-width: 1024px) {
+    font-size: 10px; 
+}
+}
+
+
+  .login-head{
+    font-weight: 600;
+    font-size: 25px;
+    font-family:'Poppins';
+    @media(min-width: 768px) and (max-width: 1024px) {
+        font-size: 20px;
+    }  
+  }
+  .otp-head{
+    font-weight: 600;
+    font-size: 25px;
+    width: 280px;
+    height: 32px;
+    font-family:'Poppins';
+    @media(min-width: 768px) and (max-width: 1024px) {
+        font-size: 20px;
+        width: 250px;
+        height: 44px; 
+    }  
+  }
+  .login-btn{
+    background-color: #172D76;
+    height: 56px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    border:none;
+    color: white;
+    font-weight: 400;
+    font-family: 'Poppins';
+    font-size: 15px;
+    @media(min-width: 768px) and (max-width: 1024px) {
+      width: 100%;
+      height: 36px; 
+      font-size: 12px;
+  }
+  }
+  .verify-btn{
+    background-color: #172D76;
+    height: 56px;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Poppins';
+    font-size: 15px;
+    @media(min-width: 768px) and (max-width: 1024px) {
+      width: 100%;
+      height: 36px; 
+      font-size: 12px;
+  }
+}
+  .otp-subhead{
+    color:#222222;
+    height: 48px;
+    width: 396px;
+    font-size: 16px;
+    font-family:'Poppins';
+    font-weight: 400;
+    @media(min-width: 768px) and (max-width: 1024px) {
+      width: 300px;
+      height: 36px; 
+      font-size: 12px;
+      margin-top: 0px;
+  }
+  }
+
+  .otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .otp-input {
+    width: 85px;
+    height: 56px;
+    font-size: 22px;
+    text-align: center;
+    border: 1.2px solid #00BDD0;
+    border-radius: 8px;
+    outline: none;
+    @media(min-width: 768px) and (max-width: 1024px) {
+      width: 45px;
+      height: 16px; 
+      font-size: 8px;
+  }
+  }
+
+  .selections-off{
+    user-select: none;
+  }

@@ -1,0 +1,80 @@
+name: GCP Cloud Run Deployments
+on:
+  push:
+    branches: [ main ]
+env:
+  SERVICE_NAME: ${{ github.event.repository.name }}
+  
+  RUN_REGION: us-east1
+  PORT: 3000
+
+jobs:
+  Deploy_DEV:
+    name: DEV Environment Deployment
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_APP_NAME }}
+    steps:
+      - name: Login
+        uses: 'google-github-actions/setup-gcloud@v0'
+        with:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_email: ${{ secrets.GCP_DEV_EMAIL }}
+          service_account_key: ${{ secrets.GCP_DEV_CREDENTIALS }}
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker --quiet
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t $IMAGE .
+
+      - name: Push Docker image
+        run: docker push $IMAGE
+
+      - name: Deploy Docker image
+        run: gcloud run deploy $SERVICE_NAME --port=3000 --project ${{ secrets.GCP_PROJECT_ID }} --memory 256Mi --min-instances 1 --max-instances 3 --image $IMAGE --region us-central1 --allow-unauthenticated --platform managed
+
+
+  deploy_QA:
+    name: QA Environment Deployment
+    runs-on: ubuntu-latest
+    needs: Deploy_DEV
+    env:
+      IMAGE_NAME_QA: gcr.io/${{ secrets.GCP_PROJECT_ID_QA }}/${{ secrets.GCP_APP_NAME_QA }}
+    steps:
+      - uses: trstringer/manual-approval@v1
+        timeout-minutes: 10
+        with:
+          secret: ${{ secrets.GCP_GITHUB_TOKEN }}
+          approvers: Sivareddy6244,NishanthK-Blv,dmylapalli
+          minimum-approvals: 1
+          issue-title: "Deploying v1.3.5 to prod from staging"
+          issue-body: "Please approve or deny the deployment of version v1.3.5."
+          exclude-workflow-initiator-as-approver: false
+          additional-approved-words: ''
+          additional-denied-words: ''
+      
+      - name: Login
+        uses: 'google-github-actions/setup-gcloud@v0'
+        with:
+            GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID_QA }}
+            service_account_email: ${{ secrets.GCP_DEV_EMAIL_QA }}
+            service_account_key: ${{ secrets.GCP_DEV_CREDENTIALS_QA }}
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker --quiet
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t $IMAGE_NAME_QA .
+
+      - name: Push Docker image
+        run: docker push $IMAGE_NAME_QA
+
+      - name: Deploy Docker image
+        run: gcloud run deploy $SERVICE_NAME --port=3000 --project ${{ secrets.GCP_PROJECT_ID_QA }} --memory 512Mi --min-instances 1 --max-instances 5 --image $IMAGE_NAME_QA --region us-central1 --allow-unauthenticated --platform managed
